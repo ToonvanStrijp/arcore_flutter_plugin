@@ -74,6 +74,7 @@ class FlutterArCoreNode(map: HashMap<String, *>) {
     }
 
     private fun getAnimationData(): AnimationData? {
+        Log.i("FlutterArCoreNode", "animation count: "+renderable.getAnimationDataCount())
         if(animationIndex != null) return renderable.getAnimationData(animationIndex)
         if(animationName != null) return renderable.getAnimationData(animationName)
         return null
